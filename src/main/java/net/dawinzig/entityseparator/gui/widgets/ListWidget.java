@@ -20,7 +20,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -325,8 +325,8 @@ public class ListWidget extends ContainerObjectSelectionList<ListWidget.Entry<?>
                            int mouseX, int mouseY, boolean hovered, float tickDelta) {
             super.render(context, index, y, x, entryWidth, entryHeight, mouseX, mouseY, hovered, tickDelta);
 
-            context.hLine(x+3, x+entryWidth/2-this.label.getWidth()/2-6, y+entryHeight/2+1, FastColor.ARGB32.color(255,128,128,128));
-            context.hLine(x+entryWidth/2+this.label.getWidth()/2+6, x+entryWidth-3, y+entryHeight/2+1, FastColor.ARGB32.color(255,128,128,128));
+            context.hLine(x+3, x+entryWidth/2-this.label.getWidth()/2-6, y+entryHeight/2+1, ARGB.color(255,128,128,128));
+            context.hLine(x+entryWidth/2+this.label.getWidth()/2+6, x+entryWidth-3, y+entryHeight/2+1, ARGB.color(255,128,128,128));
         }
 
         @Override
